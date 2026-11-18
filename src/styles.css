@@ -35,6 +35,15 @@
   --color-surface-foreground: var(--surface-foreground);
   --color-whatsapp: var(--whatsapp);
   --color-whatsapp-foreground: var(--whatsapp-foreground);
+  --color-tabby: var(--tabby);
+  --color-tabby-foreground: var(--tabby-foreground);
+  --color-tamara-foreground: var(--tamara-foreground);
+  --color-mada-blue: var(--mada-blue);
+  --color-mada-green: var(--mada-green);
+  --color-visa: var(--visa);
+  --color-mc-red: var(--mc-red);
+  --color-mc-orange: var(--mc-orange);
+  --color-logo-chip: var(--logo-chip);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -80,6 +89,17 @@
   --surface-foreground: oklch(0.2 0.01 20);
   --whatsapp: oklch(0.68 0.17 150);
   --whatsapp-foreground: oklch(0.99 0 0);
+  /* Payment brand colours (used only inside payment logos) */
+  --tabby: oklch(0.89 0.15 172);
+  --tabby-foreground: oklch(0.16 0.01 260);
+  --tamara-foreground: oklch(0.16 0.01 260);
+  --gradient-tamara: linear-gradient(110deg, oklch(0.86 0.09 60), oklch(0.82 0.1 20), oklch(0.8 0.1 320));
+  --mada-blue: oklch(0.42 0.14 255);
+  --mada-green: oklch(0.7 0.17 145);
+  --visa: oklch(0.32 0.15 268);
+  --mc-red: oklch(0.6 0.23 27);
+  --mc-orange: oklch(0.78 0.17 70);
+  --logo-chip: oklch(0.99 0 0);
   --destructive: oklch(0.6 0.22 25);
   --destructive-foreground: oklch(0.99 0 0);
   --border: oklch(0.3 0.01 20);
@@ -127,6 +147,9 @@
 
 @utility bg-crimson {
   background-image: var(--gradient-crimson);
+}
+@utility bg-tamara {
+  background-image: var(--gradient-tamara);
 }
 @utility bg-nav {
   background-image: var(--gradient-nav);

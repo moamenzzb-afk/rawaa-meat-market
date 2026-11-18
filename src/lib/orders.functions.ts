@@ -39,7 +39,12 @@ export const createOrder = createServerFn({ method: "POST" })
       throw new Error("تعذر حفظ الطلب، حاول مرة أخرى");
     }
 
-    return { orderNumber, total };
+    return {
+      orderNumber,
+      total,
+      paymentMethod: data.paymentMethod,
+      items: items.map((i) => ({ name: i.name, weight: i.weight, qty: i.qty, unitPrice: i.unit_price })),
+    };
   });
 
 const STATUS_LABEL: Record<string, string> = {
