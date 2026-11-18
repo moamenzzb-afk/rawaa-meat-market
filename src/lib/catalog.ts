@@ -1,11 +1,11 @@
-import mincedBeef from "@/assets/p-minced-beef.svg";
-import beefCubes from "@/assets/p-beef-cubes.svg";
-import beefSteak from "@/assets/p-beef-steak.svg";
-import lambRack from "@/assets/p-lamb-rack.svg";
-import beefSausage from "@/assets/p-beef-sausage.svg";
-import lambShoulder from "@/assets/p-lamb-shoulder.svg";
-import beefBurger from "@/assets/p-beef-burger.svg";
-import giftBox from "@/assets/p-gift-box.svg";
+const mincedBeef = "https://images.unsplash.com/photo-1612078894671-f11ba41d713e?w=800&auto=format&fit=crop&q=80";
+const beefCubes = "https://images.unsplash.com/photo-1690983325563-fe4412c4c347?w=800&auto=format&fit=crop&q=80";
+const beefSteak = "https://images.unsplash.com/photo-1723893905879-0e309c2a8e06?w=800&auto=format&fit=crop&q=80";
+const lambRack = "https://plus.unsplash.com/premium_photo-1668616817170-2a74b5cd181d?w=800&auto=format&fit=crop&q=80";
+const beefSausage = "https://images.unsplash.com/photo-1771243108040-696d2544adf3?w=800&auto=format&fit=crop&q=80";
+const lambShoulder = "https://images.unsplash.com/photo-1662979516518-7465baa46814?w=800&auto=format&fit=crop&q=80";
+const beefBurger = "https://plus.unsplash.com/premium_photo-1712063188469-af8a04504dcd?w=800&auto=format&fit=crop&q=80";
+const giftBox = "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=800&auto=format&fit=crop&q=80";
 
 export type CategorySlug = "offers" | "lamb" | "veal" | "cuts" | "sausages" | "gifts";
 export type Badge = "new" | "chilled" | "offer";

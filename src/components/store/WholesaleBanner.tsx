@@ -1,4 +1,4 @@
-import wholesale from "@/assets/wholesale-meat.svg";
+const wholesale = "https://images.unsplash.com/photo-1597417321971-45e034f7a993?w=1600&auto=format&fit=crop&q=80";
 import { Button } from "@/components/ui/button";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import { whatsappLink } from "@/lib/site";
