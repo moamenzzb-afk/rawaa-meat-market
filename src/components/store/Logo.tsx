@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import bull from "@/assets/bull-logo.png";
+import bull from "@/assets/bull-logo.svg";
 import { SITE } from "@/lib/site";
 
 export function Logo({ compact = false }: { compact?: boolean }) {

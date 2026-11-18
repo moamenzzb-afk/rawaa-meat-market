@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { checkoutSchema, isOnlinePayment } from "./checkout-schema";
+import { checkoutSchema, isOnlinePayment, ACTIVE_PAYMENT_METHODS } from "./checkout-schema";
 
 const base = {
   customerName: "محمد عبدالله",
@@ -12,16 +12,20 @@ const base = {
 };
 
 describe("checkout payment methods", () => {
-  it.each(["cod", "card", "tabby", "tamara"])("accepts %s", (m) => {
+  it.each(ACTIVE_PAYMENT_METHODS)("accepts active method %s", (m) => {
     expect(checkoutSchema.safeParse({ ...base, paymentMethod: m }).success).toBe(true);
   });
-  it("rejects removed gateways", () => {
+  it("rejects inactive gateways", () => {
+    expect(checkoutSchema.safeParse({ ...base, paymentMethod: "mada" }).success).toBe(false);
+    expect(checkoutSchema.safeParse({ ...base, paymentMethod: "visa" }).success).toBe(false);
+    expect(checkoutSchema.safeParse({ ...base, paymentMethod: "kashier" }).success).toBe(false);
     expect(checkoutSchema.safeParse({ ...base, paymentMethod: "paymob" }).success).toBe(false);
   });
   it("only cash on delivery is paid at the door", () => {
     expect(isOnlinePayment("cod")).toBe(false);
-    expect(isOnlinePayment("tabby")).toBe(true);
-    expect(isOnlinePayment("tamara")).toBe(true);
-    expect(isOnlinePayment("card")).toBe(true);
+    expect(isOnlinePayment("mada")).toBe(true);
+    expect(isOnlinePayment("visa")).toBe(true);
+    expect(isOnlinePayment("kashier")).toBe(true);
+    expect(isOnlinePayment("paymob")).toBe(true);
   });
 });

@@ -1,14 +1,17 @@
 import { z } from "zod";
 import { MAX_QTY, normalizeSaudiMobile } from "./cart-math";
 
-export const PAYMENT_METHODS = ["cod", "card", "tabby", "tamara"] as const;
+export const PAYMENT_METHODS = ["cod", "mada", "visa", "kashier", "paymob"] as const;
 export type PaymentMethod = (typeof PAYMENT_METHODS)[number];
+
+export const ACTIVE_PAYMENT_METHODS: PaymentMethod[] = ["cod"];
 
 export const PAYMENT_LABELS: Record<PaymentMethod, string> = {
   cod: "الدفع عند الاستلام",
-  card: "بطاقة مدى / فيزا / ماستركارد",
-  tabby: "تابي - قسّمها على 4 دفعات",
-  tamara: "تمارا - قسّمها على دفعات",
+  mada: "مدى",
+  visa: "فيزا / ماستركارد",
+  kashier: "Kashier",
+  paymob: "Paymob",
 };
 
 /** Methods paid online: the team sends the customer a secure payment link after the order is placed. */
@@ -33,7 +36,10 @@ export const checkoutSchema = z.object({
   street: z.string().trim().min(2, "الرجاء إدخال اسم الشارع").max(120, "اسم الشارع طويل جداً"),
   building: z.string().trim().min(1, "الرجاء إدخال رقم المبنى أو الفيلا").max(30),
   notes: z.string().trim().max(500, "الملاحظات طويلة جداً").optional().default(""),
-  paymentMethod: z.enum(PAYMENT_METHODS, { message: "الرجاء اختيار طريقة دفع متاحة" }),
+  paymentMethod: z.enum(PAYMENT_METHODS, { message: "الرجاء اختيار طريقة دفع متاحة" }).refine(
+    (m) => ACTIVE_PAYMENT_METHODS.includes(m),
+    "طريقة الدفع المختارة غير متاحة حالياً",
+  ),
   items: z
     .array(z.object({ id: z.string().min(1).max(60), qty: z.number().int().min(1).max(MAX_QTY) }))
     .min(1, "السلة فارغة")

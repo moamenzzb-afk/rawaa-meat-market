@@ -1,4 +1,4 @@
-import wholesale from "@/assets/wholesale-meat.jpg";
+import wholesale from "@/assets/wholesale-meat.svg";
 import { Button } from "@/components/ui/button";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import { whatsappLink } from "@/lib/site";

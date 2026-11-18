@@ -1,11 +1,11 @@
-import mincedBeef from "@/assets/p-minced-beef.jpg";
-import beefCubes from "@/assets/p-beef-cubes.jpg";
-import beefSteak from "@/assets/p-beef-steak.jpg";
-import lambRack from "@/assets/p-lamb-rack.jpg";
-import beefSausage from "@/assets/p-beef-sausage.jpg";
-import lambShoulder from "@/assets/p-lamb-shoulder.jpg";
-import beefBurger from "@/assets/p-beef-burger.jpg";
-import giftBox from "@/assets/p-gift-box.jpg";
+import mincedBeef from "@/assets/p-minced-beef.svg";
+import beefCubes from "@/assets/p-beef-cubes.svg";
+import beefSteak from "@/assets/p-beef-steak.svg";
+import lambRack from "@/assets/p-lamb-rack.svg";
+import beefSausage from "@/assets/p-beef-sausage.svg";
+import lambShoulder from "@/assets/p-lamb-shoulder.svg";
+import beefBurger from "@/assets/p-beef-burger.svg";
+import giftBox from "@/assets/p-gift-box.svg";
 
 export type CategorySlug = "offers" | "lamb" | "veal" | "cuts" | "sausages" | "gifts";
 export type Badge = "new" | "chilled" | "offer";
