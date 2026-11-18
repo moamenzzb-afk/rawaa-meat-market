@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#7a2e2e"/>
+  <rect x="130" y="100" width="140" height="90" fill="#8b3838" rx="4"/>
+  <rect x="130" y="100" width="140" height="20" fill="#c9a227"/>
+  <rect x="185" y="100" width="30" height="90" fill="#c9a227"/>
+  <path d="M 185 100 Q 160 70 140 90 Q 160 100 185 100 Q 210 100 240 90 Q 220 70 185 100" fill="#c9a227"/>
+  <text x="200" y="250" font-family="sans-serif" font-size="20" fill="#fff" text-anchor="middle">صندوق روعة الفاخر</text>
+</svg>

@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, BadgeCheck, BadgePercent, Handshake, Scissors, ShieldCheck, Snowflake } from "lucide-react";
-const hero = "https://images.unsplash.com/photo-1584048603508-4b31894439a9?w=1920&auto=format&fit=crop&q=80";
+import hero from "@/assets/hero-meat.svg";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/store/ProductCard";
 import { WholesaleBanner } from "@/components/store/WholesaleBanner";
