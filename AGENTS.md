@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- Store catalog (products, categories, prices) lives in `src/lib/catalog.ts`; the server recomputes order totals from it, never from client-sent prices.
+- Orders are inserted only by the `createOrder` server function with the admin client; `public.orders` has RLS on with no public policies, so browsers can never read or write it directly.
+- The site is Arabic RTL (`dir="rtl"` on `<html>`); use logical/RTL-aware layout and keep copy in Arabic.

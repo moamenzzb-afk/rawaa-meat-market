@@ -16,12 +16,17 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        hero: "bg-crimson text-primary-foreground font-bold shadow-crimson hover:brightness-110 rounded-xl",
+        gold: "border border-gold/60 bg-transparent text-gold hover:bg-gold hover:text-gold-foreground",
+        whatsapp: "bg-whatsapp text-whatsapp-foreground font-bold shadow hover:brightness-110 rounded-xl",
+        light: "bg-surface text-primary font-bold hover:bg-surface/90 rounded-xl",
       },
       size: {
         default: "h-9 px-4 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
         icon: "h-9 w-9",
+        xl: "h-12 px-8 text-base",
       },
     },
     defaultVariants: {
